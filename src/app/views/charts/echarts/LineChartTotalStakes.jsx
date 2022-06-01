@@ -9,35 +9,30 @@ import moment from 'moment';
 import 'moment/locale/de';
 import 'moment/locale/fr';
 
-const LineChartTotalStakePerDay = observer(({ height, color = [] }) => {
+const LineChartTotalStakes = observer(({ height, color = [] }) => {
 
     const dataStore = useStore()
     const theme = useTheme()
     const [ourDays, setOurDays] = useState([]);
-    const [stakeCreatedSum, setStakeCreatedSum] = useState([]);
-    const [stakeRemovedSum, setStakeRemovedSum] = useState([]);
+    const [totalStakes, setTotalStakes] = useState([]);
 
     useEffect(() => { 
         const getData = async () => {
             await dataStore.fetchStakesPerDayData() //TODO pass startDate and endDate here as paramters.
             let days = [];
-            let stakeCreatedSumArr = [];
-            let stakeRemovedSumArr = [];
+            let totalStakesArr = [];
+
             for (let index = 0; index < dataStore.stakesPerDayData.length; index++) {
               const element = dataStore.stakesPerDayData[index];
               const newDate = convertToDate(parseInt(element.dayId));
-              const convertedStakeCreatedSum = ethers.utils.formatEther(element.stakeCreatedSum)
-              const ourStakeCreatedSum = Number(convertedStakeCreatedSum).toFixed(2)
-              const convertedStakeRemovedSum = ethers.utils.formatEther(element.stakeRemovedSum)
-              const ourStakeRemovedSum = Number(convertedStakeRemovedSum).toFixed(2)
+              const convertedTotalStakes = ethers.utils.formatEther(element.totalStake)
+              const ourTotalStakes = Number(convertedTotalStakes).toFixed(2)
           
               days.push(moment(newDate).format("L"));
-              stakeCreatedSumArr.push(ourStakeCreatedSum)
-              stakeRemovedSumArr.push(ourStakeRemovedSum)
+              totalStakesArr.push(ourTotalStakes)
             }
             setOurDays(days)
-            setStakeCreatedSum(stakeCreatedSumArr)
-            setStakeRemovedSum(stakeRemovedSumArr)
+            setTotalStakes(totalStakesArr)
         }
         getData()
     /* we have to think about putting dataStore in here, 
@@ -101,30 +96,16 @@ const LineChartTotalStakePerDay = observer(({ height, color = [] }) => {
         series: [
             {
                 // data: [20, 50, 15, 50, 30, 70, 95],
-                data: stakeCreatedSum,
+                data: totalStakes,
                 type: 'line',
-                stack: 'Stakes Created',
-                name: 'Stakes Created',
+                stack: 'Total Stakes',
+                name: 'Total Stakes',
                 smooth: true,
                 symbolSize: 4,
                 lineStyle: {
                     width: 4,
                 },
             },
-            {
-                // data: [30, 40, 20, 50, 40, 80, 90],
-                data: stakeRemovedSum,
-                // data: ourDays,
-                type: 'line',
-                stack: 'Stakes Removed',
-                name: 'Stakes Removed',
-                smooth: true,
-                color: 'yellow',
-                symbolSize: 4,
-                lineStyle: {
-                    width: 4,
-                },
-            }
         ],
     }
 
@@ -139,4 +120,4 @@ const LineChartTotalStakePerDay = observer(({ height, color = [] }) => {
     )
 })
 
-export default LineChartTotalStakePerDay
+export default LineChartTotalStakes

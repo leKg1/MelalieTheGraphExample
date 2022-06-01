@@ -1,11 +1,10 @@
 import React from 'react'
 import LineChartTotalStakePerDay from './LineChartTotalStakePerDay'
-// import AreaChart from './AreaChart'
 import { useTheme, Box, styled } from '@mui/system'
-// import DoughnutChart from './Doughnut'
-import ComparisonChart from './ComparisonChart'
+import ComparisonChartTotalStakePerDay from './ComparisonChartTotalStakePerDay'
 import SimpleCard from 'app/components/cards/SimpleCard'
 import Breadcrumb from 'app/components/Breadcrumb/Breadcrumb'
+import LineChartTotalStakes from './LineChartTotalStakes'
 
 const Container = styled('div')(({ theme }) => ({
     margin: '30px',
@@ -34,7 +33,7 @@ const AppStakesCreatedPerDayChart = () => {
             </div>
 
             <Box sx={{ py: '12px' }} />
-            <SimpleCard title="Total Stake">
+            <SimpleCard title="Total Stake Created and Removed per day">
                 <LineChartTotalStakePerDay
                     height="350px"
                     color={[
@@ -45,7 +44,18 @@ const AppStakesCreatedPerDayChart = () => {
             </SimpleCard>
             <Box sx={{ py: '12px' }} />
             <SimpleCard title="Comparison between Stake Created and Stake Removed">
-                <ComparisonChart
+                <ComparisonChartTotalStakePerDay
+                    height="350px"
+                    color={[
+                        theme.palette.primary.dark,
+                        // theme.palette.primary.main,
+                        theme.palette.primary.light,
+                    ]}
+                />
+            </SimpleCard>
+            <Box sx={{ py: '12px' }} />
+            <SimpleCard title="TotalStakes">
+                <LineChartTotalStakes
                     height="350px"
                     color={[
                         theme.palette.primary.dark,

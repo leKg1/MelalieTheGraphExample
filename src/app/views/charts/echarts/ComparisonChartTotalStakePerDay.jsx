@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useTheme } from '@mui/system'
-import ReactEcharts from 'echarts-for-react'
 import { observer } from 'mobx-react-lite'
 import { useStore } from 'app/hooks/useStore'
 import { convertToDate } from 'app/utils/convertToDate'
@@ -9,8 +7,12 @@ import moment from 'moment';
 import 'moment/locale/de';
 import 'moment/locale/fr';
 
-const LineChartTotalStakePerDay = observer(({ height, color = [] }) => {
+import { useTheme } from '@mui/system'
+import ReactEcharts from 'echarts-for-react'
 
+
+
+const ComparisonChartTotalStakePerDay = observer(({ height, color = [] }) => {
     const dataStore = useStore()
     const theme = useTheme()
     const [ourDays, setOurDays] = useState([]);
@@ -102,7 +104,7 @@ const LineChartTotalStakePerDay = observer(({ height, color = [] }) => {
             {
                 // data: [20, 50, 15, 50, 30, 70, 95],
                 data: stakeCreatedSum,
-                type: 'line',
+                type: 'bar',
                 stack: 'Stakes Created',
                 name: 'Stakes Created',
                 smooth: true,
@@ -115,7 +117,7 @@ const LineChartTotalStakePerDay = observer(({ height, color = [] }) => {
                 // data: [30, 40, 20, 50, 40, 80, 90],
                 data: stakeRemovedSum,
                 // data: ourDays,
-                type: 'line',
+                type: 'bar',
                 stack: 'Stakes Removed',
                 name: 'Stakes Removed',
                 smooth: true,
@@ -139,4 +141,4 @@ const LineChartTotalStakePerDay = observer(({ height, color = [] }) => {
     )
 })
 
-export default LineChartTotalStakePerDay
+export default ComparisonChartTotalStakePerDay

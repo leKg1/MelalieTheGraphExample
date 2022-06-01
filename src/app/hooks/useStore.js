@@ -18,6 +18,7 @@ const fetchStakesPerDay = async (startDate, endDate) => {
           stakeCreatedSum
           stakeRemovedCount
           stakeRemovedSum
+          totalStake
         }
       }`;
 
@@ -31,6 +32,7 @@ const fetchStakesPerDay = async (startDate, endDate) => {
       stakeCreatedSum: 0,
       stakeRemovedCount: 0,
       stakeRemovedSum: 0,
+      totalStake: 0,
     });
   }
   const response = await client.query(query).toPromise();
@@ -100,6 +102,7 @@ export const DataModel = types.model("DataModel", {
   stakeCreatedSum: types.optional(types.string, "Not Available"),
   stakeRemovedCount: types.optional(types.string, "Not Available"),
   stakeRemovedSum: types.optional(types.string, "Not Available"),
+  totalStake: types.optional(types.string, "Not Available"),
 });
 
 export const DataStore = types
@@ -132,6 +135,7 @@ export const DataStore = types
         stakeCreatedSum: d.stakeCreatedSum.toString(),
         stakeRemovedCount: d.stakeRemovedCount.toString(),
         stakeRemovedSum: d.stakeRemovedSum.toString(),
+        totalStake: d.totalStake.toString(),
       }));
       store.setStakesPerDayData(newData);
     },
