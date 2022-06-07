@@ -1,6 +1,7 @@
 {
-    "name": "matx-react",
-    "version": "3.0.0",
+    "name": "melalie-graph",
+    "version": "3.0.5",
+    "homepage": "./",
     "private": true,
     "dependencies": {
         "@auth0/auth0-spa-js": "^1.19.2",
@@ -19,10 +20,12 @@
         "echarts-for-react": "^3.0.2",
         "ethers": "^5.6.8",
         "formik": "^2.2.9",
+        "ipfs-react-router": "^0.2.2",
         "jsonwebtoken": "^8.5.1",
         "jwt-decode": "^3.1.2",
         "lodash": "^4.17.19",
         "merge": "^2.1.1",
+        "mobx": "^6.6.0",
         "mobx-react-lite": "^3.4.0",
         "mobx-state-tree": "^5.1.5",
         "moment": "^2.29.1",
@@ -38,7 +41,7 @@
         "redux": "^4.1.2",
         "redux-thunk": "^2.4.0",
         "shortid": "^2.2.16",
-        "urql": "^2.2.0",
+        "urql": "^2.2.1",
         "yup": "^0.32.11"
     },
     "scripts": {
