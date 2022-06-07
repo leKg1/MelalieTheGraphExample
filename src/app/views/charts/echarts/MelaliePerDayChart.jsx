@@ -1,11 +1,11 @@
 import React from 'react'
-import LineChart from './LineChart'
-import AreaChart from './AreaChart'
+import LineChartTotalStakePerDay from './LineChartTotalStakePerDay'
 import { useTheme, Box, styled } from '@mui/system'
-import DoughnutChart from './Doughnut'
-import ComparisonChart from './ComparisonChart'
+import ComparisonChartTotalStakePerDay from './ComparisonChartTotalStakePerDay'
 import SimpleCard from 'app/components/cards/SimpleCard'
 import Breadcrumb from 'app/components/Breadcrumb/Breadcrumb'
+import LineChartTotalStakes from './LineChartTotalStakes'
+import TotalRewardsAndTotalDistributedChart from './TotalRewardsAndTotalDistributedChart'
 
 const Container = styled('div')(({ theme }) => ({
     margin: '30px',
@@ -20,7 +20,7 @@ const Container = styled('div')(({ theme }) => ({
     },
 }))
 
-const AppEchart = () => {
+const MelaliePerDayChart = () => {
     const theme = useTheme()
     return (
         <Container>
@@ -28,24 +28,14 @@ const AppEchart = () => {
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Charts', path: '/charts' },
-                        { name: 'Echarts' },
+                        { name: 'AppStakesCreatedPerDayChart' },
                     ]}
                 />
             </div>
 
-            <SimpleCard title="Doughnut Chart">
-                <DoughnutChart
-                    height="350px"
-                    color={[
-                        theme.palette.primary.dark,
-                        theme.palette.primary.main,
-                        theme.palette.primary.light,
-                    ]}
-                />
-            </SimpleCard>
             <Box sx={{ py: '12px' }} />
-            <SimpleCard title="Line Chart">
-                <LineChart
+            <SimpleCard title="Total Stake Created and Removed per day">
+                <LineChartTotalStakePerDay
                     height="350px"
                     color={[
                         theme.palette.primary.main,
@@ -54,8 +44,8 @@ const AppEchart = () => {
                 />
             </SimpleCard>
             <Box sx={{ py: '12px' }} />
-            <SimpleCard title="Comparison Chart">
-                <ComparisonChart
+            <SimpleCard title="Comparison between Stake Created and Stake Removed">
+                <ComparisonChartTotalStakePerDay
                     height="350px"
                     color={[
                         theme.palette.primary.dark,
@@ -65,14 +55,29 @@ const AppEchart = () => {
                 />
             </SimpleCard>
             <Box sx={{ py: '12px' }} />
-            <SimpleCard title="Area Chart">
-                <AreaChart
+            <SimpleCard title="TotalStakes">
+                <LineChartTotalStakes
                     height="350px"
-                    color={[theme.palette.primary.main]}
+                    color={[
+                        theme.palette.primary.dark,
+                        // theme.palette.primary.main,
+                        theme.palette.primary.light,
+                    ]}
+                />
+            </SimpleCard>
+            <Box sx={{ py: '12px' }} />
+            <SimpleCard title="TotalRewards And TotalDistributions">
+                <TotalRewardsAndTotalDistributedChart
+                    height="350px"
+                    color={[
+                        theme.palette.primary.dark,
+                        // theme.palette.primary.main,
+                        theme.palette.primary.light,
+                    ]}
                 />
             </SimpleCard>
         </Container>
     )
 }
 
-export default AppEchart
+export default MelaliePerDayChart

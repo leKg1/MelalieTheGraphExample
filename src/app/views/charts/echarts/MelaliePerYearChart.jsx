@@ -20,7 +20,7 @@ const Container = styled('div')(({ theme }) => ({
     },
 }))
 
-const AppEchart = () => {
+const MelaliePerYearChart = () => {
     const theme = useTheme()
     return (
         <Container>
@@ -75,4 +75,4 @@ const AppEchart = () => {
     )
 }
 
-export default AppEchart
+export default MelaliePerYearChart

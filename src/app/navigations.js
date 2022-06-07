@@ -121,23 +121,23 @@ export const navigations = [
 
         children: [
             {
-                name: 'Stakes Create Per Day',
-                path: '/charts/stakesCreatedPerDay',
+                name: 'Melalie Charts Per Day',
+                path: '/charts/melaliePerDay',
                 iconText: 'E',
             },
             {
-                name: 'Stakes Created Per Week',
-                path: '/charts/stakesCreatedPerWeek',
+                name: 'Melalie Charts Per Week',
+                path: '/charts/melaliePerWeek',
                 iconText: 'E',
             },
             {
-                name: 'Stakes Created Per Month',
-                path: '/charts/stakesCreatedPerMonth',
+                name: 'Melalie Charts Per Month',
+                path: '/charts/melaliePerMonth',
                 iconText: 'E',
             },
             {
-                name: 'Stakes Created Per Year',
-                path: '/charts/stakesCreatedPerYear',
+                name: 'Melalie Charts Per Year',
+                path: '/charts/melaliePerYear',
                 iconText: 'E',
             },
         ],

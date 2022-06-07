@@ -3,35 +3,35 @@ import Loadable from 'app/components/Loadable/Loadable'
 // import { authRoles } from 'app/auth/authRoles'
 
 // const AppEchart = Loadable(lazy(() => import('./echarts/AppEchart')))
-const AppStakesCreatedPerDayChart = Loadable(lazy(() => import('./echarts/AppStakesCreatedPerDayChart')))
-const AppStakesCreatedPerWeekChart = Loadable(lazy(() => import('./echarts/AppStakesCreatedPerWeekChart')))
-const AppStakesCreatedPerMonthChart = Loadable(lazy(() => import('./echarts/AppStakesCreatedPerMonthChart')))
-const AppStakesCreatedPerYearChart = Loadable(lazy(() => import('./echarts/AppStakesCreatedPerYearChart')))
+const MelaliePerDayChart = Loadable(lazy(() => import('./echarts/MelaliePerDayChart')))
+const MelaliePerWeekChart = Loadable(lazy(() => import('./echarts/MelaliePerWeekChart')))
+const MelaliePerMonthChart = Loadable(lazy(() => import('./echarts/MelaliePerMonthChart')))
+const MelaliePerYearChart = Loadable(lazy(() => import('./echarts/MelaliePerYearChart')))
 
 const chartsRoute = [
     {
         path: '/charts',
-        element: <AppStakesCreatedPerDayChart />,
+        element: <MelaliePerDayChart />,
         // auth: authRoles.editor,
     },
     {
-        path: '/charts/stakesCreatedPerDay',
-        element: <AppStakesCreatedPerDayChart />,
+        path: '/charts/melaliePerDay',
+        element: <MelaliePerDayChart />,
         // auth: authRoles.editor,
     },
     {
-        path: '/charts/stakesCreatedPerWeek',
-        element: <AppStakesCreatedPerWeekChart />,
+        path: '/charts/melaliePerWeek',
+        element: <MelaliePerWeekChart />,
         // auth: authRoles.editor,
     },
     {
-        path: '/charts/stakesCreatedPerMonth',
-        element: <AppStakesCreatedPerMonthChart />,
+        path: '/charts/melaliePerMonth',
+        element: <MelaliePerMonthChart />,
         // auth: authRoles.editor,
     },
     {
-        path: '/charts/stakesCreatedPerYear',
-        element: <AppStakesCreatedPerYearChart />,
+        path: '/charts/melaliePerYear',
+        element: <MelaliePerYearChart />,
         // auth: authRoles.editor,
     },
 ]
