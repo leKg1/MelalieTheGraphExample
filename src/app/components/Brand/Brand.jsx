@@ -1,8 +1,10 @@
 import React from 'react'
-import { MatxLogo } from 'app/components'
 import { Span } from '../../components/Typography'
 import { styled, Box } from '@mui/system'
 import useSettings from 'app/hooks/useSettings'
+// import { MelxLogo } from 'app/components'
+import MelxLogo from '../../components/MelxLogo/logoMel.png'
+
 
 const BrandRoot = styled(Box)(({ theme }) => ({
     display: 'flex',
@@ -25,10 +27,7 @@ const Brand = ({ children }) => {
     return (
         <BrandRoot>
             <Box display="flex" alignItems="center">
-                <MatxLogo />
-                <StyledSpan mode={mode} className="sidenavHoverShow">
-                    Matx
-                </StyledSpan>
+                <img src={MelxLogo} height={40} width={150} alt="melalieLogo" />
             </Box>
             <Box
                 className="sidenavHoverShow"

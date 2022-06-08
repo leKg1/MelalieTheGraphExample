@@ -8,17 +8,12 @@ import MatxLayout from '../components/MatxLayout/MatxLayout'
 import { Navigate } from 'react-router-dom'
 
 export const AllPages = () => {
-    //use this if you want to authenticate {/*<AuthGuard><MatxLayout /></AuthGuard> */}
     const all_routes = [
         {
             element: (  <MatxLayout />            ),
             children: [...dashboardRoutes, ...chartsRoute, ...materialRoutes],
         },
         ...sessionRoutes,
-        // {
-        //     path: '/',
-        //     element: <Navigate to="dashboard/default" />,
-        // },
         {
             path: '/',
             element: <Navigate to="charts/melaliePerDay" />,
