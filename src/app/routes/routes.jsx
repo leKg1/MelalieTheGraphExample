@@ -15,9 +15,13 @@ export const AllPages = () => {
             children: [...dashboardRoutes, ...chartsRoute, ...materialRoutes],
         },
         ...sessionRoutes,
+        // {
+        //     path: '/',
+        //     element: <Navigate to="dashboard/default" />,
+        // },
         {
             path: '/',
-            element: <Navigate to="dashboard/default" />,
+            element: <Navigate to="charts/melaliePerDay" />,
         },
         {
             path: '*',

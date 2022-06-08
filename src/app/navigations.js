@@ -1,9 +1,9 @@
 export const navigations = [
-    {
-        name: 'Dashboard',
-        path: '/dashboard/default',
-        icon: 'dashboard',
-    },
+    // {
+    //     name: 'Dashboard',
+    //     path: '/dashboard/default',
+    //     icon: 'dashboard',
+    // },
     // {
     //     label: 'PAGES',
     //     type: 'label',
@@ -125,21 +125,21 @@ export const navigations = [
                 path: '/charts/melaliePerDay',
                 iconText: 'E',
             },
-            {
-                name: 'Melalie Charts Per Week',
-                path: '/charts/melaliePerWeek',
-                iconText: 'E',
-            },
-            {
-                name: 'Melalie Charts Per Month',
-                path: '/charts/melaliePerMonth',
-                iconText: 'E',
-            },
-            {
-                name: 'Melalie Charts Per Year',
-                path: '/charts/melaliePerYear',
-                iconText: 'E',
-            },
+            // {
+            //     name: 'Melalie Charts Per Week',
+            //     path: '/charts/melaliePerWeek',
+            //     iconText: 'E',
+            // },
+            // {
+            //     name: 'Melalie Charts Per Month',
+            //     path: '/charts/melaliePerMonth',
+            //     iconText: 'E',
+            // },
+            // {
+            //     name: 'Melalie Charts Per Year',
+            //     path: '/charts/melaliePerYear',
+            //     iconText: 'E',
+            // },
         ],
     },
     // {

@@ -28,32 +28,11 @@ const MelaliePerDayChart = () => {
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Charts', path: '/charts' },
-                        { name: 'AppStakesCreatedPerDayChart' },
+                        { name: 'Melalie Per Day' },
                     ]}
                 />
             </div>
 
-            <Box sx={{ py: '12px' }} />
-            <SimpleCard title="Total Stake Created and Removed per day">
-                <LineChartTotalStakePerDay
-                    height="350px"
-                    color={[
-                        theme.palette.primary.main,
-                        theme.palette.primary.light,
-                    ]}
-                />
-            </SimpleCard>
-            <Box sx={{ py: '12px' }} />
-            <SimpleCard title="Comparison between Stake Created and Stake Removed">
-                <ComparisonChartTotalStakePerDay
-                    height="350px"
-                    color={[
-                        theme.palette.primary.dark,
-                        // theme.palette.primary.main,
-                        theme.palette.primary.light,
-                    ]}
-                />
-            </SimpleCard>
             <Box sx={{ py: '12px' }} />
             <SimpleCard title="TotalStakes">
                 <LineChartTotalStakes
@@ -68,6 +47,28 @@ const MelaliePerDayChart = () => {
             <Box sx={{ py: '12px' }} />
             <SimpleCard title="TotalRewards And TotalDistributions">
                 <TotalRewardsAndTotalDistributedChart
+                    height="350px"
+                    color={[
+                        theme.palette.primary.dark,
+                        // theme.palette.primary.main,
+                        theme.palette.primary.light,
+                    ]}
+                />
+            </SimpleCard>
+
+            <Box sx={{ py: '12px' }} />
+            <SimpleCard title="Total Stake Created and Removed per day">
+                <LineChartTotalStakePerDay
+                    height="350px"
+                    color={[
+                        theme.palette.primary.main,
+                        theme.palette.primary.light,
+                    ]}
+                />
+            </SimpleCard>
+            <Box sx={{ py: '12px' }} />
+            <SimpleCard title="Comparison between Stake Created and Stake Removed">
+                <ComparisonChartTotalStakePerDay
                     height="350px"
                     color={[
                         theme.palette.primary.dark,
