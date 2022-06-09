@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useReducer } from 'react'
 import jwtDecode from 'jwt-decode'
-import axios from 'axios.js'
+import axios from 'app/contexts/axios.js'
 import { MatxLoading } from 'app/components'
 
 const initialState = {

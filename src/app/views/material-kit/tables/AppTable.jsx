@@ -1,7 +1,7 @@
 import React from 'react'
 import SimpleTable from './SimpleTable'
 import PaginationTable from './PaginationTable'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb } from 'app/components'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({
@@ -28,13 +28,6 @@ const AppTable = () => {
                     ]}
                 />
             </div>
-            <SimpleCard title="Simple Table">
-                <SimpleTable />
-            </SimpleCard>
-            <Box py="12px" />
-            <SimpleCard title="Pagination Table">
-                <PaginationTable />
-            </SimpleCard>
         </Container>
     )
 }
