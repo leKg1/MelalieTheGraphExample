@@ -8,7 +8,7 @@ const redirectRoute = [
     {
         path: '/',
         exact: true,
-        component: () => <Redirect to="/charts/melaliePerDay" />,
+        component: () => <Redirect to="/dashboard/default" />,
     },
 ]
 
