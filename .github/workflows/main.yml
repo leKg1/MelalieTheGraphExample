@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env: 
+env:
   CI: false
 
   # Allows you to run this workflow manually from the Actions tab
@@ -30,10 +30,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: CI=false npm i && npm run build
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        run: npm i && npm run build
