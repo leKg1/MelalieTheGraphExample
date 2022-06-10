@@ -7,5 +7,5 @@
 2. run ```npm i```
 3. run ```npm start```
 4. run ```npm run ipfs``` and ```npm run pin```  (pin via ssh!)
-5. display 
+5. [display latest build here](https://inspiraluna.github.io/MelalieTheGraphExample/build/).
 
