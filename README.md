@@ -1,3 +1,5 @@
+![CI/CD](https://github.com/inspiraluna/MelalieTheGraphExample/workflows/CI/CD/badge.svg)
+
 # The graph example with Melalie Staking Token
 
 ## Run 
