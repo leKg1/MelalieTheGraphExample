@@ -1,5 +1,4 @@
 import React from 'react'
-import LineChartTotalStakePerDay from './LineChartTotalStakePerDay'
 import { useTheme, Box, styled } from '@mui/system'
 import ComparisonChartTotalStakePerDay from './ComparisonChartTotalStakePerDay'
 import SimpleCard from 'app/components/cards/SimpleCard'
@@ -56,16 +55,7 @@ const MelaliePerDayChart = () => {
                 />
             </SimpleCard>
 
-            <Box sx={{ py: '12px' }} />
-            <SimpleCard title="Total Stake Created and Removed per day">
-                <LineChartTotalStakePerDay
-                    height="350px"
-                    color={[
-                        theme.palette.primary.main,
-                        theme.palette.primary.light,
-                    ]}
-                />
-            </SimpleCard>
+         
             <Box sx={{ py: '12px' }} />
             <SimpleCard title="Comparison between Stake Created and Stake Removed">
                 <ComparisonChartTotalStakePerDay
