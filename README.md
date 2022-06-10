@@ -1,4 +1,4 @@
-![CI/CD](https://github.com/inspiraluna/MelalieTheGraphExample/workflows/CI/badge.svg)
+![Melalie workflow](https://github.com/inspiraluna/MelalieTheGraphExample/actions/workflows/main.yml/badge.svg)
 
 # The graph example with Melalie Staking Token
 
