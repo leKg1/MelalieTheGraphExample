@@ -1,7 +1,7 @@
 {
     "name": "melalie-graph",
     "version": "3.0.8",
-    "homepage": "./",
+    "homepage": "https://inspiraluna.github.io/melalie-graph",
     "private": true,
     "dependencies": {
         "@auth0/auth0-spa-js": "^1.19.2",
@@ -22,8 +22,6 @@
         "ethers": "^5.6.8",
         "formik": "^2.2.9",
         "graphql": "^16.5.0",
-        "ipfs-react-router": "^0.2.2",
-        "is-ipfs": "^6.0.2",
         "jsonwebtoken": "^8.5.1",
         "jwt-decode": "^3.1.2",
         "lodash": "^4.17.19",
@@ -51,7 +49,8 @@
         "start": "react-app-rewired start",
         "build": "GENERATE_SOURCEMAP=false react-scripts build",
         "ipfs": "rm -rf build && react-scripts build && CID=$(ipfs add -r build | tail -1 | cut -d' ' -f2) && echo '\n' && echo $CID",
-        "ipfs-push": "CID=$(ipfs add -r build | tail -1 | cut -d' ' -f2) && echo '\n' && echo $CID && ipfs pin remote add --service=Pinata --name=MelalieGraph_$npm_package_version $CID",
+        "pin": "CID=$(ipfs add -r build | tail -1 | cut -d' ' -f2) && echo '\n' && echo $CID &&  ssh root@ipfs.le-space.de \"ipfs pin add -r $CID\"",
+        "r-pinning": "CID=$(ipfs add -r build | tail -1 | cut -d' ' -f2) && echo '\n' && echo $CID && ipfs pin remote add --service=Pinata --name=MelalieGraph_$npm_package_version $CID",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "ghp": "react-scripts build && gh-pages -d build"
